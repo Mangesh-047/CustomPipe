@@ -32,33 +32,36 @@
   <div class="row mt-5">
     <div class="col-md-12">
 
-      <table class="table table-bordered table-dark">
-        <thead>
-          <tr>
-            <th>Sr No</th>
-            <th>Player Name</th>
-            <th>Team</th>
-            <th>Role</th>
-            <th>Total Runs</th>
-            <th>Total Wickets</th>
-            <th>Matches Played</th>
-          </tr>
-        </thead>
+      <div class="table-responsive">
 
-       
-        <tbody>
-          <!-- | searchfilter : searchInput -->
-          <tr *ngFor="let p of playerArray  | filter : searchInput, index as i">
-            <td>{{i + 1}}</td>
-            <td>{{p.name}}</td>
-            <td>{{p.country}}</td>
-            <td>{{p.role}}</td>
-            <td>{{p.totalRuns}}</td>
-            <td>{{p.totalWickets}}</td>
-            <td>{{p.matchesPlayed}}</td>
-          </tr>
-        </tbody>
-      </table>
+        <table class="table table-bordered table-dark">
+          <thead>
+            <tr>
+              <th>Sr No</th>
+              <th>Player Name</th>
+              <th>Team</th>
+              <th>Role</th>
+              <th>Total Runs</th>
+              <th>Total Wickets</th>
+              <th>Matches Played</th>
+            </tr>
+          </thead>
+  
+         
+          <tbody>
+            <!-- | searchfilter : searchInput -->
+            <tr *ngFor="let p of playerArray  | filter : searchInput, index as i">
+              <td>{{i + 1}}</td>
+              <td>{{p.name}}</td>
+              <td>{{p.country}}</td>
+              <td>{{p.role}}</td>
+              <td>{{p.totalRuns}}</td>
+              <td>{{p.totalWickets}}</td>
+              <td>{{p.matchesPlayed}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
