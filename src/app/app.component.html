@@ -37,9 +37,10 @@
           <tr>
             <th>Sr No</th>
             <th>Player Name</th>
-            <th>Age</th>
             <th>Team</th>
+            <th>Role</th>
             <th>Total Runs</th>
+            <th>Total Wickets</th>
             <th>Matches Played</th>
           </tr>
         </thead>
@@ -50,9 +51,10 @@
           <tr *ngFor="let p of playerArray  | filter : searchInput, index as i" [ngClass]="{'bg-secondary': searchInput}">
             <td>{{i + 1}}</td>
             <td>{{p.name}}</td>
-            <td>{{p.age}}</td>
             <td>{{p.country}}</td>
+            <td>{{p.role}}</td>
             <td>{{p.totalRuns}}</td>
+            <td>{{p.totalWickets}}</td>
             <td>{{p.matchesPlayed}}</td>
           </tr>
         </tbody>
